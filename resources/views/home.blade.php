@@ -9,8 +9,6 @@
             <div class="row">
                 <div class="col-md-5 pe-4">
                     <div class="row">
-                        {{-- <h1 class="display-5">Share your idea</h1>
-                        <h1 class="display-5 fw-bold">Create Your Dreams</h1> --}}
                         <h1 class="display-5 fw-bold">{{ $c1 }}</h1>
                         <hr class="solid mt-3">
                         <p class="mt-3">{{ $c1desc }}</p>

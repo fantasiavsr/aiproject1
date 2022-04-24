@@ -40,18 +40,15 @@ Route::get('/home', [homeController::class, 'index']);
 Route::get('/order', [orderController::class, 'index']);
 Route::post('/order', [orderController::class, 'store']);
 
-
 Route::get('/media', [mediaController::class, 'index']);
 Route::get('/contactus', [contactusController::class, 'index']);
-
-Route::get('/login', [loginController::class, 'index'])->name('login');
-Route::post('/login', [loginController::class, 'authenticate']);
-Route::post('/logout', [loginController::class, 'logout']);
 
 Route::get('/register', [registerController::class, 'index']);
 Route::post('/register', [registerController::class, 'store']);
 
-Route::get('/admin', [adminController::class, 'index'])->middleware('auth');
+Route::get('/login', [loginController::class, 'index'])->name('login');
+Route::post('/login', [loginController::class, 'authenticate']);
+Route::post('/logout', [loginController::class, 'logout']);
 
 Route::get('/editHome', [editHomeController::class, 'index']);
 Route::get('/editHome/{id}', [editHomeController::class, 'showData']);
@@ -68,3 +65,4 @@ Route::get('/editContactUs', [editContactUsController::class, 'index']);
 Route::get('/editContactUs/{id}', [editContactUsController::class, 'showData']);
 Route::post('/editContactUs', [editContactUsController::class, 'update']);
 
+Route::get('/admin', [adminController::class, 'index'])->middleware('auth');

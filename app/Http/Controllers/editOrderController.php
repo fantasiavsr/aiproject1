@@ -17,16 +17,6 @@ class editOrderController extends Controller
         ]);
     }
 
-    // public function showData($id)
-    // {
-
-    // }
-
-    // public function update(Request $request)
-    // {
-
-    // }
-
     public function delete($id)
     {
         $data = order::find($id);
